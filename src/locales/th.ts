@@ -177,6 +177,15 @@ export const th: TranslationSchema = {
     roleLabel: "ตำแหน่ง / สิทธิ์",
     activeBadge: "ใช้งานอยู่",
     previewLabel: "ตัวอย่างการแสดงผล",
+    zeroReloadArch: "สถาปัตยกรรม Zero-Reload",
+    instantLocaleSync: "ซิงค์ภาษาระบบทันทีโดยไม่โหลดหน้าใหม่",
+    hardwareLocalStorage: "ฐานข้อมูล LocalStorage ทำงานอยู่",
+    hardwareThermalReceipt: "เครื่องพิมพ์ใบเสร็จพร้อมใช้งาน",
+    hardwareBarcodeScanner: "เครื่องสแกนบาร์โค้ดเชื่อมต่อแล้ว",
+    sandboxClientOnly: "JustGoDev Sandbox • ทำงานบนเบราว์เซอร์ 100%",
+    cashierStationDefault: "จุดแคชเชียร์จำลอง",
+    stationOnline: "จุดขาย #01 ออนไลน์",
+    posRegisterSubtext: "ระบบเครื่องคิดเงิน JustGoDev Cloud POS",
   },
 };
 

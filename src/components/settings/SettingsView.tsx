@@ -136,10 +136,10 @@ export function SettingsView() {
             <div className="pt-2">
               <div className="p-2.5 rounded-xl bg-muted/40 border border-border/60 text-center">
                 <span className="text-[10px] text-muted-foreground block">
-                  Zero-Reload Architecture
+                  {dictionary.settings.zeroReloadArch}
                 </span>
                 <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5 block">
-                  Instant Locale Synchronization
+                  {dictionary.settings.instantLocaleSync}
                 </span>
               </div>
             </div>
@@ -209,20 +209,20 @@ export function SettingsView() {
         <div className="flex items-center gap-4 flex-wrap">
           <span className="flex items-center gap-1.5">
             <HardDrive className="w-3.5 h-3.5 text-primary" />
-            <span>LocalStorage Database Active</span>
+            <span>{dictionary.settings.hardwareLocalStorage}</span>
           </span>
           <span className="flex items-center gap-1.5">
             <Printer className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Thermal Receipt Ready</span>
+            <span>{dictionary.settings.hardwareThermalReceipt}</span>
           </span>
           <span className="flex items-center gap-1.5">
             <Barcode className="w-3.5 h-3.5 text-indigo-500" />
-            <span>Barcode Scanner Hooked</span>
+            <span>{dictionary.settings.hardwareBarcodeScanner}</span>
           </span>
         </div>
         <div className="flex items-center gap-1.5 text-[11px]">
           <Wifi className="w-3.5 h-3.5 text-emerald-500" />
-          <span>JustGoDev Sandbox • Client-only Execution</span>
+          <span>{dictionary.settings.sandboxClientOnly}</span>
         </div>
       </div>
       {/* POS Station Quick Status & Operator Bar (No page title/subtitle) */}
@@ -234,18 +234,18 @@ export function SettingsView() {
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <span className="font-bold text-sm text-foreground truncate">
-                {isMounted && user ? user.name : "Cashier Station"}
+                {isMounted && user ? user.name : dictionary.settings.cashierStationDefault}
               </span>
               <Badge variant="outline" className="text-[10px] py-0 px-2 h-4 border-primary/40 text-primary uppercase font-mono">
                 {isMounted && user ? (user.role === "manager" ? dictionary.auth.roleManager : dictionary.auth.roleCashier) : "POS"}
               </Badge>
               <Badge variant="secondary" className="text-[9px] py-0 px-1.5 h-4 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 flex items-center gap-1">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Station #01 Online</span>
+                <span>{dictionary.settings.stationOnline}</span>
               </Badge>
             </div>
             <p className="text-[11px] text-muted-foreground mt-0.5">
-              JustGoDev Cloud POS Register • ID: {user?.id || "usr-01"}
+              {dictionary.settings.posRegisterSubtext} • ID: {user?.id || "usr-01"}
             </p>
           </div>
         </div>

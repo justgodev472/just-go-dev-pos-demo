@@ -177,6 +177,15 @@ export const en: TranslationSchema = {
     roleLabel: "Role / Permission",
     activeBadge: "Active",
     previewLabel: "Live Preview",
+    zeroReloadArch: "Zero-Reload Architecture",
+    instantLocaleSync: "Instant Locale Synchronization",
+    hardwareLocalStorage: "LocalStorage Database Active",
+    hardwareThermalReceipt: "Thermal Receipt Ready",
+    hardwareBarcodeScanner: "Barcode Scanner Hooked",
+    sandboxClientOnly: "JustGoDev Sandbox • Client-only Execution",
+    cashierStationDefault: "Cashier Station",
+    stationOnline: "Station #01 Online",
+    posRegisterSubtext: "JustGoDev Cloud POS Register",
   },
 };
 

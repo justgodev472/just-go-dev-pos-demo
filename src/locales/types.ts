@@ -175,6 +175,15 @@ export interface TranslationSchema {
     roleLabel: string;
     activeBadge: string;
     previewLabel: string;
+    zeroReloadArch: string;
+    instantLocaleSync: string;
+    hardwareLocalStorage: string;
+    hardwareThermalReceipt: string;
+    hardwareBarcodeScanner: string;
+    sandboxClientOnly: string;
+    cashierStationDefault: string;
+    stationOnline: string;
+    posRegisterSubtext: string;
   };
 }
 
