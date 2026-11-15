@@ -57,6 +57,10 @@ export interface TranslationSchema {
     lightMode: string;
     darkMode: string;
     language: string;
+    mobileUnsupportedTitle: string;
+    mobileUnsupportedDesc: string;
+    mobileUnsupportedMinResolution: string;
+    mobileUnsupportedLogout: string;
     noProductsFound: string;
     catalogItems: string;
     remaining: string;
