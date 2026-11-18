@@ -8,8 +8,6 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
-  KeyRound,
-  CheckCircle2,
   Globe,
   Sun,
   Moon,
@@ -62,14 +60,6 @@ export function LoginView({ onLogin }: LoginViewProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
-  const [selectedAccountId, setSelectedAccountId] = useState("usr-mgr");
-
-  const handleFillAccount = (acc: DemoAccount) => {
-    setEmail(acc.email);
-    setPassword(acc.pass);
-    setSelectedAccountId(acc.id);
-    setErrorMsg("");
-  };
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -240,64 +230,6 @@ export function LoginView({ onLogin }: LoginViewProps) {
             <span>{dictionary.auth.quickLoginBtn || "ເຂົ້າສູ່ລະບົບ"}</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
-
-          {/* Demo Credentials Box (เปะ user & password ไว้ในหน้า form) */}
-          <div className="pt-2">
-            <div className="p-3.5 rounded-2xl bg-muted/40 border border-border/80 space-y-2.5">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
-                  <KeyRound className="w-3.5 h-3.5 text-primary" />
-                  <span>{dictionary.auth.demoCredentialsTitle}</span>
-                </div>
-                <span className="text-[10px] text-muted-foreground font-medium">
-                  {dictionary.auth.clickToAutoFill}
-                </span>
-              </div>
-
-              <div className="space-y-1.5">
-                {DEMO_ACCOUNTS.map((acc) => {
-                  const isSelected = selectedAccountId === acc.id;
-                  const roleLabel =
-                    acc.role === "manager"
-                      ? dictionary.auth.roleManager
-                      : dictionary.auth.roleCashier;
-
-                  return (
-                    <button
-                      type="button"
-                      key={acc.id}
-                      onClick={() => handleFillAccount(acc)}
-                      className={`w-full p-2.5 rounded-xl border text-left transition-all flex items-center justify-between group cursor-pointer ${
-                        isSelected
-                          ? "bg-primary/10 border-primary text-foreground"
-                          : "bg-background border-border/60 hover:border-primary/40 text-foreground"
-                      }`}
-                    >
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-1.5">
-                          <span className="font-semibold text-xs text-foreground">
-                            {roleLabel}
-                          </span>
-                          {isSelected && (
-                            <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
-                          )}
-                        </div>
-                        <div className="flex items-center gap-2 mt-0.5 text-[11px] font-mono text-muted-foreground truncate">
-                          <span>User: <strong className="text-foreground">{acc.email}</strong></span>
-                          <span>•</span>
-                          <span>Pass: <strong className="text-foreground">{acc.pass}</strong></span>
-                        </div>
-                      </div>
-
-                      <span className="text-[10px] font-medium px-2 py-1 rounded-md bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
-                        {dictionary.auth.fillButton}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
         </form>
 
         {/* Developer Credit Inside Form */}

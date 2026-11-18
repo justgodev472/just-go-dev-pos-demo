@@ -176,6 +176,8 @@ export const en: TranslationSchema = {
     accountDesc: "Current signed-in user credentials and active role permissions",
     logoutButton: "Log Out",
     logoutConfirm: "Are you sure you want to log out of the demo?",
+    switchRoleTitle: "Switch Role to...",
+    switchRoleDesc: "Instantly switch POS staff roles and access permissions",
     systemInfo: "Sandbox Environment",
     systemInfoDesc: "JustGoDev POS Showcase Sandbox running entirely on secure Client-side LocalStorage",
     roleLabel: "Role / Permission",

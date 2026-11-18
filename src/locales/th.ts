@@ -176,6 +176,8 @@ export const th: TranslationSchema = {
     accountDesc: "ข้อมูลการเข้าสู่ระบบและสิทธิ์การใช้งาน",
     logoutButton: "ออกจากระบบ",
     logoutConfirm: "คุณต้องการออกจากระบบหรือไม่?",
+    switchRoleTitle: "เปลี่ยนบทบาทเป็น...",
+    switchRoleDesc: "ทดลองสลับสิทธิ์การใช้งาน POS ได้ทันที",
     systemInfo: "ข้อมูลระบบ Sandbox",
     systemInfoDesc: "ระบบ POS Showcase Sandbox ทำงานบน Client-side LocalStorage ปลอดภัย 100%",
     roleLabel: "ตำแหน่ง / สิทธิ์",
